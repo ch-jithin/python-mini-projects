@@ -1,0 +1,18 @@
+def add(x, y): return x + y
+def sub(x, y): return x - y
+def mul(x, y): return x * y
+def div(x, y): return x / y if y != 0 else "Divide by zero error"
+
+def main():
+    while True:
+        print("\n1. Add 2. Subtract 3. Multiply 4. Divide 5. Exit")
+        choice = input("Choose: ")
+        if choice == '5':
+            break
+        x = float(input("First number: "))
+        y = float(input("Second number: "))
+        operations = {'1': add, '2': sub, '3': mul, '4': div}
+        print("Result:", operations.get(choice, lambda x, y: "Invalid")(x, y))
+
+if __name__ == "__main__":
+    main()
