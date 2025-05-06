@@ -1,0 +1,18 @@
+import random
+
+def game():
+    number = random.randint(1, 100)
+    tries = 0
+    while True:
+        guess = int(input("Guess a number (1-100): "))
+        tries += 1
+        if guess == number:
+            print(f"Correct! Attempts: {tries}")
+            break
+        elif guess < number:
+            print("Too low!")
+        else:
+            print("Too high!")
+
+if __name__ == "__main__":
+    game()
