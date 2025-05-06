@@ -1,0 +1,9 @@
+def tip_calculator():
+    bill = float(input("Total bill amount: "))
+    tip_percent = float(input("Tip percentage: "))
+    people = int(input("Split between how many people? "))
+    total = bill + (bill * tip_percent / 100)
+    print(f"Each person pays: {total / people:.2f}")
+
+if __name__ == "__main__":
+    tip_calculator()
